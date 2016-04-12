@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - 5.10.1
+
+services:
+  - postgresql
+
+notifications:
+  slack: devops-training-spb:WMoTNpq308zIwHDNZj8xttd6
