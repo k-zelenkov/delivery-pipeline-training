@@ -1,14 +1,15 @@
 language: node_js
 node_js:
-  - 5.10.1
-
+- 5.10.1
 addons:
   postgresql: '9.4'
-
 notifications:
   slack: devops-training-spb:WMoTNpq308zIwHDNZj8xttd6
-
 before_script:
-  - createuser -s crudtest
-  - psql postgres -c 'create database crudtest'
-  - psql postgres -c "ALTER ROLE crudtest WITH PASSWORD 'crudtest';"
+- createuser -s crudtest
+- psql postgres -c 'create database crudtest'
+- psql postgres -c "ALTER ROLE crudtest WITH PASSWORD 'crudtest';"
+deploy:
+  provider: heroku
+  api_key:
+    secure: NBDYRxHyn6+m928s+k4K+np7mxsfS9+b8esUDfDUTp+KBtR5KW6jQG63EBfyEnr1qm2i+/zvOtg+Fs8AhpfdTDxMpqpahi85MAUDJJv2w19NmA8pmfOAaq19GZIb0wR6od+1AkqQEtaonFDvwu3SOka+YBsCbnziq3VSsP4WitYd+KcOXyWn1coVYN+/Jk837wwLp4ldBThS1zrpj8ow9if0JwV+A5wEntNJW4TWXqiJhCcdxAU/XgcH8qPYgAPfMnapP+nSfX/RlbGgHNz5E5ib3fFb+vwELZPp2qJkfYEIX6LT124vK5FKg7ZaYb6gI4zSTveOcaJnsznyag2V1BUqqtg+gPQz9sTTC2R2AR/oTjrOwGLLBX/G6zbt/f9eVFmghTyZ+fAIk+FzqRvt34unarshMajazJ5h9OdVYTd4ecrUzJCJZfMTUVK58p44wdTbvx1np6ahqwq+4esAyhAhdOl4wOmxWYzzTPmbj/hifummUfAz1f59j9d2soxM64GesG4bxjZiIuruBAFkGp53/HKlYqxja0yjRjqdlpnPbASnodx2N+/UurpNBWbim32rdi6wDFI5mz3jDaRf6ueh/A73F6nTUUXk3L02M+GgqGTI0Gos0ilFxUABdbJMbiBGMK8+g9bF3X3CSktBAxp3pjAf7KZUEgAFzrW0vyc=
