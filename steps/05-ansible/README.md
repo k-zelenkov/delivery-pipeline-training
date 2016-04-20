@@ -1,5 +1,9 @@
 # Ansible (configuration management)
 
+[Fast tutour](https://www.ansible.com/quick-start-video)
+
+[Modules list](http://docs.ansible.com/ansible/list_of_all_modules.html)
+
 ```
 sudo chmod a+rwx /var/run/docker.sock
 
@@ -14,6 +18,7 @@ ansible app -u root -i ./inv -m ping
 # module
 
 ansible-doc ping
+ansible-doc -l | less
 
 ansible app -u root -i ./inv -m setup  | less
 ansible app -u root -i ./inv -m file -a 'path=/etc/hosts'
