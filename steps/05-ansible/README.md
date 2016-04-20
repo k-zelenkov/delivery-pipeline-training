@@ -1,6 +1,5 @@
 # Ansible (configuration management)
 
-
 ```
 sudo chmod a+rwx /var/run/docker.sock
 
@@ -14,7 +13,7 @@ ssh-add secure/id_rsa
 ansible app -u root -i ./inv -m ping 
 # module
 
-ansible doc ping
+ansible-doc ping
 
 ansible app -u root -i ./inv -m setup  | less
 ansible app -u root -i ./inv -m file -a 'path=/etc/hosts'
@@ -30,12 +29,9 @@ ansible app -u root -i ./inv -m file -a 'path=/tmp/hello'
 
 ansible app -u root -i ./inv -m file -a 'path=/tmp/hello'
 
-
-
 ansible-playbook  -i ./inv play.yml
 
 ansible app -u root -i ./inv -m shell -a "cat /tmp/myfile.txt" 
-
 
 ```
 
