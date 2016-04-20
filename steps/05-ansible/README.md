@@ -34,15 +34,3 @@ ansible-playbook  -i ./inv play.yml
 ansible app -u root -i ./inv -m shell -a "cat /tmp/myfile.txt" 
 
 ```
-
-
-## Practice
-
-* docker container
-* monorepo (ansible included)
-* ansible cli
-* vars
-* roles (galaxy)
-* install sample app node.js, postgresql, nginx
-* ansible tests !!!
-* ansible tower (docker)
