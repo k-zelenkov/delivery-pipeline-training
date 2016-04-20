@@ -11,6 +11,7 @@
 ### Need to be installed (for Mac OS)
 
 * [Docker](https://docs.docker.com/engine/installation/mac/)
+* [Docker-Compose](https://docs.docker.com/compose/install/)
 * [Kitematic](https://kitematic.com/)
 * [Brew](http://brew.sh/)
 * [Node js](https://nodejs.org/en/download/) or ``$ brew update && brew install nodejs``
