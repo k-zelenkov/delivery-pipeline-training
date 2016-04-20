@@ -59,7 +59,7 @@ d top noisy
 d inspect noisy
 
 # get specific attribute
-d inspect noisy -f '{{.NetworkSettings.IPAddress}}'
+d inspect  -f '{{.NetworkSettings.IPAddress}}' noisy
 
 d stop noisy
 
