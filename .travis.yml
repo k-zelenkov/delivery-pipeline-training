@@ -1,4 +1,4 @@
-sudo: false
+# sudo: false
 language: node_js
 node_js: '5'
 addons:
@@ -7,8 +7,8 @@ before_script:
   - bash install.sh
 script:
   - source env.sh && npm run test
-notifications:
-  slack: devops-training-spb:kfjTXFxdFQxyBbAJ0UtYVqOe
+# notifications:
+#   slack: devops-training-spb:kfjTXFxdFQxyBbAJ0UtYVqOe
 deploy:
   provider: heroku
   app: fierce-depths-58786
@@ -16,3 +16,25 @@ deploy:
     secure: SyHVVnddv5hGpLdEEe2aw4owWMM0nF4IV16PWDin2e6ha6m7WGPEOaWa9KyKFiTvgZ1N7zt7tNn1zmWiIUu9/UfRtZ9TAA+frsRZuvljPrRvN1iIp77CprzmC9uHtJMNfW3GmUg5NnT0WFLoFPt9flm18hVQeA+OZTwk2lQzCrE/PNpwBpkD7Q91Z/aedHqCwdQQfBMFuGLA/zWLvQmhzjE2lKQ2rF6M/LFm+6Rv4U2qRsSRdoGbjyN2/K923HXM5ijSuOBDBM0c7AqwOsANVYMuPE8veUmtExfqXzXyQAwi2/+JszUZKy++h2SYBTVbjik9rj0fx8cKwjirax1zBmdP05WoaZwrcjB7oNkgC6L5Xf0xI/V9Wq0WaZfC6SnILFayruEN8yDjDTuVMLUASOSKSuANSYgTcDesWyGIfXPW516kW8CVvMUu40INpxfb74mGYnRiJ92JoEr/7tI4Psk9qV0zo/MhUtwN2Q4RxjYxcaW5k2D5Lf5F6VYu5K6IUS7IxpnFeZtsye5ArmKZvMidmOXpcO1Z/BS1snIjif8QG+1hI/8rmmelAmemr7pBPtivrfA5vZWB9OsKaWW8ftMFqZC2iupZ5TKDYEvC4z2EWcVvHT7AWDOUUBhUTTFVvMs55kl6uFlABCT/FInxn7MELef3Iy03Z7zXimb29/Y=
   on:
     repo: k-zelenkov/delivery-pipeline-training
+
+
+
+
+# language: node_js
+# node_js:
+# - 5.10.1
+# addons:
+#   postgresql: '9.4'
+# notifications:
+#   slack: devops-training-spb:WMoTNpq308zIwHDNZj8xttd6
+# before_script:
+# - createuser -s crudtest
+# - psql postgres -c 'create database crudtest'
+# - psql postgres -c "ALTER ROLE crudtest WITH PASSWORD 'crudtest';"
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: SyHVVnddv5hGpLdEEe2aw4owWMM0nF4IV16PWDin2e6ha6m7WGPEOaWa9KyKFiTvgZ1N7zt7tNn1zmWiIUu9/UfRtZ9TAA+frsRZuvljPrRvN1iIp77CprzmC9uHtJMNfW3GmUg5NnT0WFLoFPt9flm18hVQeA+OZTwk2lQzCrE/PNpwBpkD7Q91Z/aedHqCwdQQfBMFuGLA/zWLvQmhzjE2lKQ2rF6M/LFm+6Rv4U2qRsSRdoGbjyN2/K923HXM5ijSuOBDBM0c7AqwOsANVYMuPE8veUmtExfqXzXyQAwi2/+JszUZKy++h2SYBTVbjik9rj0fx8cKwjirax1zBmdP05WoaZwrcjB7oNkgC6L5Xf0xI/V9Wq0WaZfC6SnILFayruEN8yDjDTuVMLUASOSKSuANSYgTcDesWyGIfXPW516kW8CVvMUu40INpxfb74mGYnRiJ92JoEr/7tI4Psk9qV0zo/MhUtwN2Q4RxjYxcaW5k2D5Lf5F6VYu5K6IUS7IxpnFeZtsye5ArmKZvMidmOXpcO1Z/BS1snIjif8QG+1hI/8rmmelAmemr7pBPtivrfA5vZWB9OsKaWW8ftMFqZC2iupZ5TKDYEvC4z2EWcVvHT7AWDOUUBhUTTFVvMs55kl6uFlABCT/FInxn7MELef3Iy03Z7zXimb29/Y=
+#   app: fierce-depths-58786
+#   on:
+#     repo: k-zelenkov/delivery-pipeline-training
